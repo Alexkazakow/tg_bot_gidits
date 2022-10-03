@@ -5,7 +5,7 @@ import numpy as np
 from telebot.async_telebot import AsyncTeleBot
 from telebot import types
 
-bot = AsyncTeleBot('5345404432:AAH4kDrPj430GMDoQF1ejDcV5e5IegD1_Y8')
+bot = AsyncTeleBot('TOKEN')
 digit, number = 0, 0
 dct = {'0': '0⃣', '1': '1⃣', '2': '2⃣', '3': '3⃣', '4':'4⃣', '5':'5⃣', '6':'6⃣', '7':'7⃣', '8':'8⃣', '9':'9⃣'}
 
