@@ -1,20 +1,30 @@
-Маленькая математическая игра в виде телеграм-бота на pyTelegramBotAPI
+<p align="center">
+  <br>
+  <img width="240" src="./src/assets/tapps.png" alt="logo of telegram web apps">
+  <br>
+  <br>
+</p>
 
+# Telegram Mini Apps(TMA) + React + TypeScript + Vite
 
-ЗАДАЧА: 
-Составить из минимального количества простых цифр сложное число 
- 
-ПРИМЕР:
-Составьте число 120 из цифры 9 
- 
-РЕШЕНИЕ: 
-9 + 999/9 = 120 (использовано 5 цифр)
- 
-Разрешено использовать следующие операторы:
-* сложение 
-* вычитание 
-* умножение
-* деление 
-* скобки
-* степень
-* факториал
+Vite (which means "fast" in French) is a front-end build tool and development server that aims to provide a faster and leaner development experience for modern web projects. We will utilise Vite to create Telegram Mini App example.
+
+This template provides a minimal setup to get TMA working in Vite with React, TypeScript, HMR and some ESLint rules.
+
+## Usage
+
+```bash
+# npm
+npm install
+npm run dev --host
+```
+```bash
+# yarn
+yarn
+yarn dev --host
+```
+
+# Links
+- [Doc](https://docs.ton.org/develop/dapps/twa)
+- [Example TMA](https://t.me/vite_twa_example_bot/app)
+- [Link](https://twa-dev.github.io/vite-boilerplate/)
