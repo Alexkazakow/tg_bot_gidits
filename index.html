@@ -4,19 +4,60 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-   <title>Hello Page</title>
+   <title>Calculator</title>
   </head>
   <body>
     <h1>Hello!</h1>
-    <div class="d-grid gap-2 d-md-block">
-      <button class="btn btn-outline-secondary" type="button">Button</button>
-      <button class="btn btn-outline-secondary" type="button">Button Button</button>
-    </div>
-    <div class="btn-group" role="group" aria-label="Basic example">
-      <button type="button" class="btn btn-primary">Left</button>
-      <button type="button" class="btn btn-primary">Middle</button>
-      <button type="button" class="btn btn-primary">Right</button>
-    </div>
+    <br>
+
+    <div id="calculator">
+      <div id="result">Result: </div>
+      <input type="text" id="display" disabled>
+      <br>
+      <button onclick="addToDisplay('7')">7</button>
+      <button onclick="addToDisplay('8')">8</button>
+      <button onclick="addToDisplay('9')">9</button>
+      <button onclick="addToDisplay('+')">+</button>
+      <br>
+      <button onclick="addToDisplay('4')">4</button>
+      <button onclick="addToDisplay('5')">5</button>
+      <button onclick="addToDisplay('6')">6</button>
+      <button onclick="addToDisplay('-')">-</button>
+      <br>
+      <button onclick="addToDisplay('1')">1</button>
+      <button onclick="addToDisplay('2')">2</button>
+      <button onclick="addToDisplay('3')">3</button>
+      <button onclick="addToDisplay('*')">&times;</button>
+      <br>
+      <button onclick="addToDisplay('0')">0</button>
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="calculateResult()">=</button>
+      <button onclick="addToDisplay('/')">&divide;</button>
+  </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      // Эта функция используется для добавления конкретного "value" (значения) на дисплей.
+      function addToDisplay(value) {
+          document.getElementById('display').value += value;
+      }
+      // Эта функция очищает дисплей, устанавливая его значение в пустую строку.
+      function clearDisplay() {
+          document.getElementById('display').value = '';
+          document.getElementById("result").innerText = 'Result: ';
+      }
+      // Эта функция вычисляет результат выражения на дисплее с помощью функции 'eval'.
+      // Она обрабатывает ошибки и выводит сообщение 'Error', если выражение недопустимо.
+      function calculateResult() {
+          try {
+     // Получение результата выражения и вывод результата на дисплей.
+              document.getElementById("result").innerText = "Result: " + eval(document.getElementById('display').value);
+              // document.getElementById('display').value = eval(document.getElementById('display').value);
+          } catch (error) {
+     // Если в процессе вычисления возникла ошибка, на дисплее отобразится сообщение 'Error'.
+              document.getElementById('display').value = 'Error';
+          }
+      }
+  </script>
   </body>
 </html>
